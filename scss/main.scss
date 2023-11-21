@@ -116,6 +116,99 @@ body {
   }
 
   .projects {
-    margin-top: 200px;
+    margin-top: 70px;
+    margin-bottom: 400px;
+    text-align: center;
+    .projects-container {
+      max-width: 1400px;
+      width: 100%;
+      min-height: 200px;
+      margin: auto;
+
+      .projects-title {
+        font-size: 38px;
+        font-weight: 500;
+      }
+
+      .projects-cards {
+        @include d-flex(space-around, start);
+        margin-top: 48px;
+        .project {
+          max-width: 600px;
+          min-height: 500px;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-bottom: 20px;
+          box-shadow: 0px 0px 20px 0px rgba(227, 219, 219, 0.75);
+          -webkit-box-shadow: 0px 0px 20px 0px rgba(227, 219, 219, 0.75);
+          -moz-box-shadow: 0px 0px 20px 0px rgba(227, 219, 219, 0.75);
+          .img-container {
+            width: 100%;
+            height: 250px;
+            background-image: url("../images/project-1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 4px 4px 0px 0px;
+          }
+
+          .project-title {
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 24px;
+          }
+
+          .project-tech-title {
+            font-size: 22px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 18px;
+          }
+
+          .stack-list {
+            @include d-flex(center, start);
+            column-gap: 30px;
+
+            li {
+              font-size: 18px;
+              font-weight: 500;
+              color: #212529;
+            }
+          }
+
+          .description {
+            width: 80%;
+            margin: 28px auto;
+            color: #5b5a5a;
+          }
+
+          .links-section {
+            @include d-flex(space-around, start);
+            .btn {
+              padding: 14px 18px;
+              border-radius: 30px;
+              color: #fff;
+              background: linear-gradient(
+                90deg,
+                rgba(131, 58, 180, 1) 0%,
+                rgba(29, 97, 253, 1) 99%
+              );
+              box-shadow: 0px 0px 29px 0px rgba(214, 202, 202, 0.75);
+              -webkit-box-shadow: 0px 0px 29px 0px rgba(214, 202, 202, 0.75);
+              -moz-box-shadow: 0px 0px 29px 0px rgba(214, 202, 202, 0.75);
+              margin-top: 24px;
+              display: inline-block;
+              transition: box-shadow 1s;
+
+              &:hover {
+                box-shadow: 0px 0px 39px 9px rgba(214, 202, 202, 0.75);
+                -webkit-box-shadow: 0px 0px 39px 9px rgba(214, 202, 202, 0.75);
+                -moz-box-shadow: 0px 0px 39px 9px rgba(214, 202, 202, 0.75);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
